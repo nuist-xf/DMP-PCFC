@@ -1,0 +1,4 @@
+ST-GCN基于原始值的精度指标  mae: 598.4344, rmse: 1026.3455, mape: 5.4302
+Number of model parameters is 13787
+| end of epoch   1 | time:  8.98s | train_mape_loss 8.5714 | train_mae_loss 1220.2565 | valid mae 1137.2440 | valid mape 5.5031 | valid corr  0.9016  learning rate  0.008000
+test mae 719.5639 | test mape 6.3724 | test corr 0.9422
