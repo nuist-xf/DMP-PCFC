@@ -40,6 +40,38 @@ python train.py
 # Generate the results of the prediction metrics
 python Save_result_multipredict.py
 ```
+```bash
+Main hyperparameters
+# 24 steps
+parser.add_argument('--epochs', type=int, default=39, help='')
+parser.add_argument('--lr', type=float, default=0.008, help='learning rate')
+parser.add_argument('--patience', type=int, default=2, help='patience')
+parser.add_argument('--lr_d', type=float, default=0.5, help='inverse data')
+
+# 48 steps
+# parser.add_argument('--seq_out_len', type=int, default=24*2, help='output sequence length')
+# parser.add_argument('--horizon', type=int, default=24*2)
+# parser.add_argument('--epochs', type=int, default=39, help='')
+# parser.add_argument('--lr', type=float, default=0.008, help='learning rate')
+# parser.add_argument('--patience', type=int, default=1, help='patience')
+# parser.add_argument('--lr_d', type=float, default=0.45, help='inverse data')
+
+# 72 steps
+# parser.add_argument('--seq_out_len', type=int, default=24*3, help='output sequence length')
+# parser.add_argument('--horizon', type=int, default=24*3)
+# parser.add_argument('--epochs', type=int, default=39, help='')
+# parser.add_argument('--lr', type=float, default=0.008, help='learning rate')
+# parser.add_argument('--patience', type=int, default=1, help='patience')
+# parser.add_argument('--lr_d', type=float, default=0.45, help='inverse data')
+
+# 96 steps
+# parser.add_argument('--seq_out_len', type=int, default=24*4, help='output sequence length')
+# parser.add_argument('--horizon', type=int, default=24*4)
+# parser.add_argument('--epochs', type=int, default=39, help='')
+# parser.add_argument('--lr', type=float, default=0.008, help='learning rate')
+# parser.add_argument('--patience', type=int, default=1, help='patience')
+# parser.add_argument('--lr_d', type=float, default=0.45, help='inverse data')
+```
 
 ## Repository Structure
 ```
