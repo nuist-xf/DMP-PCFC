@@ -1,42 +1,38 @@
-# DMP-PCFC
-Python training and test data, code, and results of a DMP-PCFC model for multi-energy loads forecasting in integrated energy systems.
-
-
-```markdown
-# DMP-PCFC: Dual resolution channel multi-period cross reconstruction parallel closed-form continuous-time network
+# DMP-PCFC: Dual-Resolution Channel Multi-Period Cross Reconstruction Parallel Closed-Form Continuous-Time Network
 
 [![Python 3.10](https://img.shields.io/badge/Python-3.10.13-blue?logo=python)](https://www.python.org/)
 [![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0.1%2Bcu118-red?logo=pytorch)](https://pytorch.org/)
 [![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Official implementation of DMP-PCFC for multi-step energy loads prediction, using meteorological data from the Integrated Energy System (lES) at Arizona State
-University (ASU) Tempe Campus (http://cm.asu.edu/) and National Centers for Environmental Information (https://www.ncei.noaa.gov/).
+Advanced neural architecture for multi-step energy loads prediction in integrated energy systems, utilizing data from:
+- [ASU Tempe Campus IES](http://cm.asu.edu/)
+- [NOAA NCEI](https://www.ncei.noaa.gov/)
 
-![Prediction Visualization](assets/24-steps/)
+![Prediction Visualization](assets/24-steps/prediction_example.png)
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- **NVIDIA GPU** with CUDA 11.8 support
+- ​**NVIDIA GPU**​ with CUDA 11.8 support
 - Python 3.10.13
 - PyTorch 2.0.1
 - numpy 1.26.0
 - pandas 2.0.3
 
-### 1. Clone Repository
+### Installation
 ```bash
+# Clone repository
 git clone https://github.com/nuist-xf/DMP-PCFC.git
 cd DMP-PCFC
-```
 
-### 2. Install Dependencies
-```bash
+# Create conda environment
 conda create -n dmp-pcfc python=3.10.13
 conda activate dmp-pcfc
-pip install -r requirements.txt
-```
 
-### 3. Run Pipeline
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Pipeline
 
 # train（Automatic use of the GPU）
 python train.py
@@ -45,42 +41,42 @@ python train.py
 python Save_result_multipredict.py
 ```
 
-## 🗂️ Repository Structure
+## Repository Structure
 ```
-.
-├── assets/                 # Visualization
-│   ├── 24-steps/          # 24-hours
-│   ├── 48-steps/          # 48-hours
-│   ├── 72-steps/          # 72-hours
-│   └── 96-steps/          # 96-hours
+DMP-PCFC/
+├── assets/                 # Visualization resources
+│   ├── 24-steps/          # 24-hour predictions
+│   ├── 48-steps/          # 48-hour predictions
+│   ├── 72-steps/          # 72-hour predictions
+│   └── 96-steps/          # 96-hour predictions
 │
-├── data/                  # dataset
-│   ├── dataset_input.csv  # Pre-processed sequence data
+├── data/                  
+│   └── dataset_input.csv  # Preprocessed sequence data
 │
-├── model/                 # The optimal weight of the model obtained by the experiment
-│   ├── 24-steps/model.pt  # 24-hours
-│   ├── 48-steps/model.pt  # 48-hours
-│   ├── 72-steps/model.pt  # 72-hours
-│   └── 96-steps/model.pt  # 96-hours
-├── result/                # The optimal results obtained by the experiment
-│   ├── 24-steps/          # 24-hours
-│   ├── 48-steps/          # 48-hours
-│   ├── 72-steps/          # 72-hours
-│   └── 96-steps/          # 96-hours
+├── model/                 # Trained model weights
+│   ├── 24-steps/model.pt  
+│   ├── 48-steps/model.pt  
+│   ├── 72-steps/model.pt  
+│   └── 96-steps/model.pt  
 │
-├── metrics.py             # Evaluation indicators（RMSE/MAE/MAPE）
+├── result/                # Prediction results
+│   ├── 24-steps/          
+│   ├── 48-steps/          
+│   ├── 72-steps/          
+│   └── 96-steps/          
+│
+├── metrics.py             # Evaluation metrics (RMSE/MAE/MAPE)
 ├── train.py               # Main training script
-├── trainer.py             # Management of the training process (Optimizer, etc.)
+├── trainer.py             # Training process management
 ├── torch_cfc.py           # DMP-PCFC model implementation
-├── Save_result_multipredict.py # Compute the metric result for the entire test set and save
-├── Save_result.py         # Compute the metric result for the first moment of each day of the test set
-└── util.py                # Data Loader
-
+├── Save_result_multipredict.py  # Full test set evaluation metrics
+├── Save_result.py         # Daily first-moment evaluation metrics
+└── util.py                # Data loading utilities
 ```
 
 
 
-## 📧 Contact
+## Contact
 For technical support or data access requests:
 - **Liguo Weng**  
   📧 002311@nuist.edu.cn 
