@@ -8,7 +8,7 @@ Advanced neural architecture for multi-step energy loads prediction in integrate
 - [ASU Tempe Campus IES](http://cm.asu.edu/)
 - [NOAA NCEI](https://www.ncei.noaa.gov/)
 
-![Prediction Visualization](assets/24-steps/prediction_example.png)
+![Prediction Visualization](assets/24-steps/the first month pred cooling.png)
 
 ## 🚀 Getting Started
 
