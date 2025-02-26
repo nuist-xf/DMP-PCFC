@@ -1,0 +1,6 @@
+# Core dependencies
+torch==2.0.1+cu118  # https://download.pytorch.org/whl/torch_stable.html
+pandas==2.0.3
+numpy==1.26.0
+scikit-learn==1.5.2
+matplotlib==3.7.2
